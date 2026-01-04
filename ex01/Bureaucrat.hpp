@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:22 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/04 17:05:36 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/04 17:04:39 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <exception>
 #include <string>
 #include <iostream>
+
+class Form;
 
 class Bureaucrat 
 {
@@ -39,6 +41,8 @@ class Bureaucrat
         // Other member functions
         void                incrementGrade();
         void                decrementGrade();
+
+        void                signForm(Form& form);
 
         // Exceptions
         class GradeTooHighException : public std::exception
