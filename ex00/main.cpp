@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:26 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/04 16:31:19 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/06 16:24:50 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-        std::cout << "=== INIT WITH LIMIT GRADES ===" << std::endl;
+        std::cout << "=== INIT BUREAUCRAT WITH LIMIT GRADES ===" << std::endl;
     {
         try
         {
@@ -29,7 +29,7 @@ int main()
         }
     }
     
-    std::cout << "\n=== INIT WITH TOO HIGH GRADE ===" << std::endl;
+    std::cout << "\n=== INIT BUREAUCRAT WITH TOO HIGH GRADE ===" << std::endl;
     {
         try
         {
@@ -42,7 +42,7 @@ int main()
         }
     }
 
-    std::cout << "\n=== INIT WITH TOO LOW GRADE ===" << std::endl;
+    std::cout << "\n=== INIT BUREAUCRAT WITH TOO LOW GRADE ===" << std::endl;
     {
         try
         {
@@ -55,7 +55,7 @@ int main()
         }
     }
     
-    std::cout << "\n=== INCREMENT GRADE ===" << std::endl;
+    std::cout << "\n=== INCREMENT BUREAUCRAT GRADE ===" << std::endl;
     {
         try
         {
@@ -71,7 +71,7 @@ int main()
         }
     }
     
-    std::cout << "\n=== DECREMENT GRADE ===" << std::endl;
+    std::cout << "\n=== DECREMENT BUREAUCRAT GRADE ===" << std::endl;
     {
         try
         {
@@ -87,7 +87,7 @@ int main()
         }
     }
     
-    std::cout << "\n=== COPY CONSTRUCTOR ===" << std::endl;
+    std::cout << "\n=== BUREAUCRAT COPY CONSTRUCTOR ===" << std::endl;
     {
         try
         {
@@ -102,7 +102,7 @@ int main()
         }
     }
 
-    std::cout << "\n=== ASSIGNMENT OPERATOR ===" << std::endl;
+    std::cout << "\n=== BUREAUCRAT ASSIGNMENT OPERATOR ===" << std::endl;
     {
         try
         {

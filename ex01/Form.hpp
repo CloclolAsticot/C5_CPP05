@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 16:34:09 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/04 17:19:33 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/06 16:14:49 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Form
         Form(const Form& other);
         ~Form();
 
-        Form& operator=(Form& other);
+        Form& operator=(const Form& other);
 
         // Getters
         const std::string&  getName() const;
@@ -45,16 +45,23 @@ class Form
         // Exceptions
         class GradeTooHighException : public std::exception
         {
-            virtual const char* what() const throw();
+            public:
+                virtual const char* what() const throw();
         };
         
         class GradeTooLowException : public std::exception
         {
-            virtual const char* what() const throw();
+            public:
+                virtual const char* what() const throw();
+        };
+
+        class AlreadySignedException : public std::exception
+        {
+            public:
+                virtual const char* what() const throw();
         };
 };
 
 std::ostream& operator<<(std::ostream& os, const Form&);
-
 
 #endif
