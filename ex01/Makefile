@@ -2,7 +2,7 @@
 #				VARIABLES				#
 #########################################
 
-NAME = bureaucrat
+NAME = bureaucracy
 
 # Compilation
 CC = c++

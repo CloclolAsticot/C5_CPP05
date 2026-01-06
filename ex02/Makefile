@@ -14,7 +14,8 @@ D_OBJS 			= objs
 
 # Source Files (only .cpp files)
 FILES 	= 	main.cpp		\
-			Bureaucrat.cpp
+			Bureaucrat.cpp  \
+			AForm.cpp
 
 
 OBJS 		= 	$(patsubst %.cpp,$(D_OBJS)/%.o,$(FILES))
