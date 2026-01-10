@@ -6,18 +6,18 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 19:33:54 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/06 19:35:56 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/09 18:18:48 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 #include "AForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm("RobotomyRequest", 145, 137), _target("generic_target")
+PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardon", 25, 5), _target("generic_target")
 {
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string& target) : AForm("RobotomyRequest", 145, 137), _target(target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string& target) : AForm("PresidentialPardon", 25, 5), _target(target)
 {
 }
 

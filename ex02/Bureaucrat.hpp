@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:22 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/06 17:09:31 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/10 17:17:35 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ class Bureaucrat
         void                decrementGrade();
 
         void                signForm(AForm& form);
+        void                executeForm(AForm const & form) const;
 
         // Exceptions
         class GradeTooHighException : public std::exception
@@ -61,3 +62,4 @@ class Bureaucrat
 std::ostream& operator<<(std::ostream& os, const Bureaucrat&);
 
 #endif
+

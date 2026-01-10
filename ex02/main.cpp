@@ -6,131 +6,142 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:26 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/06 17:09:56 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/10 21:02:56 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include <ctime>
+#include <cstdlib>
+
 
 int main()
 {
-    std::cout << "=== INIT FORM WITH LIMIT GRADES ===" << std::endl;
-    {
-        try
-        {
-            AForm foo = AForm("foo", 1, 1);
-            std::cout << foo;
-            AForm bar = AForm("bar", 150, 150);
-            std::cout << bar;
-        }
-        catch (std::exception& e)
-        {
-            std::cout << e.what() << std::endl;
-        }
-    }
+    srand(time(NULL)); //generates the seed used by rand() for the Robotomization request form
     
-    std::cout << "\n=== INIT FORM WITH TOO HIGH GRADE ===" << std::endl;
     {
-        try
-        {
-            AForm foo = AForm("foo", 0, 1);
-            std::cout << foo;
-        }
-        catch (std::exception& e)
-        {
-            std::cout << e.what() << std::endl;
-        }
-    }
-    {
-        try
-        {
-            AForm bar = AForm("bar", 1, 0);
-            std::cout << bar;
-        }
-        catch (std::exception& e)
-        {
-            std::cout << e.what() << std::endl;
-        }
-    }
-
-    std::cout << "\n=== INIT FORM WITH TOO LOW GRADE ===" << std::endl;
-    {
-        try
-        {
-            AForm foo = AForm("foo", 151, 150);
-            std::cout << foo;
-        }
-        catch (std::exception& e)
-        {
-            std::cout << e.what() << std::endl;
-        }
-    }
-    {
-        try
-        {
-            AForm bar = AForm("bar", 150, 151);
-            std::cout << bar;
-        }
-        catch (std::exception& e)
-        {
-            std::cout << e.what() << std::endl;
-        }
-    }
-
-    std::cout << "\n=== FORM COPY CONSTRUCTOR ===" << std::endl;
-    {
-        try
-        {
-            AForm original("original", 50, 25);
-            Bureaucrat bob("bob", 10);
-            bob.signForm(original);
+        try {
+            Bureaucrat bob = Bureaucrat("bob", 1);
             
-            AForm copy(original);
-            std::cout << "Original: " << original;
-            std::cout << "Copy: " << copy;
+            std::cout << "\n=== SHRUBBERY FORM TEST ===" << std::endl;
+            ShrubberyCreationForm shrubbery = ShrubberyCreationForm("shrubbery_target");
+            std::cout << shrubbery;
+            bob.signForm(shrubbery);
+            bob.executeForm(shrubbery);
+            
+            std::cout << "\n=== ROBOTOMY FORM TEST ===" << std::endl;
+            RobotomyRequestForm robotomy = RobotomyRequestForm("robotomy_target");
+            std::cout << robotomy;
+            bob.signForm(robotomy);
+            std::cout << "\nAttempt 1:" << std::endl;
+            bob.executeForm(robotomy);
+            std::cout << "\nAttempt 2:" << std::endl;
+            bob.executeForm(robotomy);
+            std::cout << "\nAttempt 3:" << std::endl;
+            bob.executeForm(robotomy);
+            std::cout << "\nAttempt 4:" << std::endl;
+            bob.executeForm(robotomy);
+            
+            std::cout << "\n=== PRESIDENTIAL PARDON FORM TEST ===" << std::endl;
+            PresidentialPardonForm pardon = PresidentialPardonForm("pardon_target");
+            std::cout << pardon;
+            bob.signForm(pardon);
+            bob.executeForm(pardon);
         }
-        catch (std::exception& e)
-        {
-            std::cout << "Error: " << e.what() << std::endl;
+        catch (std::exception& e) {
+            std::cout << e.what();
+        }     
+    }
+
+    std::cout << "\n=== GRADE TOO LOW TO SIGN FORM ===" << std::endl;
+    {
+        try {
+            Bureaucrat bob = Bureaucrat("bob", 146);
+            std::cout << bob;
+            
+            ShrubberyCreationForm shrubbery = ShrubberyCreationForm("shrubbery_target");
+            std::cout << shrubbery;
+            
+            bob.signForm(shrubbery);
+        }
+        catch (std::exception& e) {
+            std::cout << e.what();
+        }
+    }
+
+    std::cout << "\n=== GRADE TOO LOW TO EXECUTE FORM ===" << std::endl;
+    {
+        try {
+            Bureaucrat bob = Bureaucrat("bob", 138);
+            std::cout << bob;
+            
+            ShrubberyCreationForm shrubbery = ShrubberyCreationForm("shrubbery_target");
+            std::cout << shrubbery;
+            
+            bob.signForm(shrubbery);
+            bob.executeForm(shrubbery);
+
+        }
+        catch (std::exception& e) {
+            std::cout << e.what();
+        }
+    }
+
+    std::cout << "\n=== FORM NOT SIGNED ===" << std::endl;
+    {
+        try {
+            Bureaucrat bob = Bureaucrat("bob", 1);
+            std::cout << bob;
+            
+            ShrubberyCreationForm shrubbery = ShrubberyCreationForm("shrubbery_target");
+            std::cout << shrubbery;
+            
+            bob.executeForm(shrubbery);
+
+        }
+        catch (std::exception& e) {
+            std::cout << e.what();
         }
     }
     
-    std::cout << "\n=== SIGNING : SUCCESS + ALREADY SIGNED ===" << std::endl;
+    std::cout << "\n=== FORM ALREADY SIGNED ===" << std::endl;
     {
-        try
-        {
-            AForm foo = AForm("foo", 130, 110);
-            std::cout << foo;
-            Bureaucrat bob = Bureaucrat("bob", 120);
-            std::cout << bob;
-            bob.signForm(foo);
-            std::cout << foo;
-            bob.signForm(foo);
-            std::cout << foo;
+        try {
+            Bureaucrat foo("foo", 1);
+            Bureaucrat bar("bar", 1);
+            ShrubberyCreationForm shrubbery("shrubbery_target");
+            
+            foo.signForm(shrubbery);
+            foo.executeForm(shrubbery);
+            bar.signForm(shrubbery);
         }
-        catch (std::exception& e)
-        {
+        catch (std::exception& e) {
             std::cout << e.what() << std::endl;
         }
     }
-
-    std::cout << "\n=== SIGNING : GRADE TOO LOW ===" << std::endl;
+    
+    std::cout << "\n=== COPY CONSTRUCTOR ===" << std::endl;
     {
-        try
-        {
-            AForm foo = AForm("foo", 130, 110);
-            std::cout << foo;
-            Bureaucrat bob = Bureaucrat("bob", 140);
-            std::cout << bob;
-            bob.signForm(foo);
-            std::cout << foo;
+        try {
+            Bureaucrat bob("bob", 1);
+            
+            ShrubberyCreationForm original("shrubbery_target");
+            bob.signForm(original);
+            std::cout << original;
+            
+            ShrubberyCreationForm copy(original);
+            std::cout << copy;
+            
+            bob.executeForm(original);  // Should succeed
+            bob.executeForm(copy);      // Should fail - unsigned
         }
-        catch (std::exception& e)
-        {
+        catch (std::exception& e) {
             std::cout << e.what() << std::endl;
         }
     }
-
+    
     return (0);
 }

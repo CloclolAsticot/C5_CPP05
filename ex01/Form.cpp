@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 16:34:12 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/06 16:38:33 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/10 20:59:08 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ const char*         Form::GradeTooLowException::what() const throw()
 
 const char*         Form::AlreadySignedException::what() const throw()
 {
-    return ("Form already signed!");
+    return ("Form is already signed!");
 }
 
 std::ostream& operator<<(std::ostream& os, const Form& form)

@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:20 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/06 17:09:07 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/10 17:22:03 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,23 @@ void                Bureaucrat::decrementGrade()
 
 void                Bureaucrat::signForm(AForm& form)
 {
-    try
-    {
+    try {
         form.beSigned(*this);
         std::cout << this->_name << " signed " << form.getName() << "." << std::endl;
     }
     catch (std::exception& e) {
         std::cout << this->_name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+    }
+}
+
+void                Bureaucrat::executeForm(AForm const & form) const
+{
+    try {
+        form.execute(*this);
+        std::cout << this->_name << " executed " << form.getName() << "." << std::endl;
+    }
+    catch (std::exception& e) {
+        std::cout << this->_name << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
     }
 }
 

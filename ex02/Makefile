@@ -13,9 +13,12 @@ DEPFLAGS = -MMD -MP
 D_OBJS 			= objs
 
 # Source Files (only .cpp files)
-FILES 	= 	main.cpp		\
-			Bureaucrat.cpp  \
-			AForm.cpp
+FILES 	= 	main.cpp					\
+			Bureaucrat.cpp  			\
+			AForm.cpp 					\
+			PresidentialPardonForm.cpp	\
+			ShrubberyCreationForm.cpp	\
+			RobotomyRequestForm.cpp
 
 
 OBJS 		= 	$(patsubst %.cpp,$(D_OBJS)/%.o,$(FILES))

@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 16:34:12 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/06 18:27:40 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/10 20:59:08 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void                AForm::beSigned(const Bureaucrat& bureaucrat)
     this->_isSigned = true;
 }
 
-void                AForm::execute(Bureaucrat const& executor)
+void                AForm::execute(Bureaucrat const& executor) const
 {
     if (this->_isSigned == false)
         throw NotSignedException();
@@ -88,7 +88,12 @@ const char*         AForm::GradeTooLowException::what() const throw()
 
 const char*         AForm::AlreadySignedException::what() const throw()
 {
-    return ("AForm already signed!");
+    return ("Form is already signed!");
+}
+
+const char*         AForm::NotSignedException::what() const throw()
+{
+    return ("Form is not signed!");
 }
 
 std::ostream& operator<<(std::ostream& os, const AForm& form)

@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 16:34:09 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/06 18:24:32 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/01/09 18:15:55 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class AForm
 
         // Other member functions
         void                beSigned(const Bureaucrat& bureaucrat);
-        void                execute(Bureaucrat const & executor);       // will validate grades + call executeAction
+        void                execute(Bureaucrat const & executor) const;       // will validate grades + call executeAction
 
         // Exceptions
         class GradeTooHighException : public std::exception
