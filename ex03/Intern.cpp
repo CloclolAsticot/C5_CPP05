@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 21:12:22 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/10 21:50:08 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 16:02:42 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ AForm*    Intern::makeForm(const std::string& formName, const std::string& targe
     {
         if (formName == formTypes[i])
         {
-            std::cout << "Intern creates " << formName << "." << std::endl;
+            std::cout << "Intern creates " << formName << " form." << std::endl;
             return (formCreations[i](target));
         }
     }
-    std::cout << formName << " doesn't exist." << std::endl;
+    std::cout << formName << " form doesn't exist." << std::endl;
     return (NULL);
 }

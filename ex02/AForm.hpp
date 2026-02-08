@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 16:34:09 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/09 18:15:55 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 16:28:20 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class AForm
         AForm();
         AForm(const std::string& name, const int requiredSignGrade, const int requiredExecuteGrade);
         AForm(const AForm& other);
-        ~AForm();
+        virtual ~AForm();
 
         AForm& operator=(const AForm& other);
 

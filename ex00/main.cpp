@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:26 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/06 16:24:50 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:04:29 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-        std::cout << "=== INIT BUREAUCRAT WITH LIMIT GRADES ===" << std::endl;
+    std::cout << "=== INIT BUREAUCRAT WITH LIMIT GRADES ===" << std::endl;
     {
         try
         {
