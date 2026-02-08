@@ -6,11 +6,10 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:26 by csavreux          #+#    #+#             */
-/*   Updated: 2026/02/08 18:18:09 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:47:52 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
 
 int main()

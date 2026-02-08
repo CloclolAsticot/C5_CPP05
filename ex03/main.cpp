@@ -6,18 +6,12 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:26 by csavreux          #+#    #+#             */
-/*   Updated: 2026/02/08 16:14:21 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:42:23 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include <ctime>
 #include <cstdlib>
 #include "Intern.hpp"
-
 
 int main()
 {

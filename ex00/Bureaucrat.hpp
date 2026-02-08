@@ -6,15 +6,13 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:22 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/04 17:05:36 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:49:34 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
-#include <exception>
-#include <string>
 #include <iostream>
 
 class Bureaucrat 

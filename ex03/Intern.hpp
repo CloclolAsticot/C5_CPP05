@@ -6,14 +6,13 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 21:12:19 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/10 21:18:54 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:42:38 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INTERN_HPP
 # define INTERN_HPP
 
-#include <string>
 #include "AForm.hpp"
 
 class Intern 

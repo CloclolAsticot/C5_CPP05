@@ -6,12 +6,11 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 19:31:58 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/11 16:34:16 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:42:08 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
-#include "AForm.hpp"
 #include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm("robotomy request", 72, 45), _target("generic_target")

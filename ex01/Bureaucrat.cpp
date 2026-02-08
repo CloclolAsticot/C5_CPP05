@@ -6,13 +6,11 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 05:10:20 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/06 16:42:00 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:48:50 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
-
 
 Bureaucrat::Bureaucrat() : _name("generic_bureaucrat"), _grade(150)
 {

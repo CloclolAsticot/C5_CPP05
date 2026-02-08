@@ -6,12 +6,11 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 19:33:54 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/11 16:33:58 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:42:19 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
-#include "AForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm() : AForm("presidential pardon", 25, 5), _target("generic_target")
 {

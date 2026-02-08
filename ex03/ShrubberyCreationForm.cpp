@@ -6,13 +6,11 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 19:09:42 by csavreux          #+#    #+#             */
-/*   Updated: 2026/01/11 16:34:31 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:41:43 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
-#include "AForm.hpp"
-
 #include <fstream>
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("shrubbery creation", 145, 137), _target("generic_target")

@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 16:34:09 by csavreux          #+#    #+#             */
-/*   Updated: 2026/02/08 16:28:20 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2026/02/08 18:47:08 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define AFORM_HPP
 
 #include "Bureaucrat.hpp"
-#include <exception>
 
 class AForm
 {
